@@ -1,13 +1,13 @@
 {
-  "name": "@myapp/shared",
+  "name": "@attendly/shared",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "Types and DTOs shared by backend and frontend",
+  "type": "module",
   "main": "src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "license": "ISC"
 }

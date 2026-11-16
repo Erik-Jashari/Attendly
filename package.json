@@ -1,19 +1,26 @@
 {
   "name": "attendly",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Digital QR-based attendance system for UBT",
+  "workspaces": [
+    "packages/shared",
+    "packages/backend",
+    "packages/frontend"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:backend": "npm run dev -w @attendly/backend",
+    "dev:frontend": "npm run dev -w @attendly/frontend",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "db:migrate": "npm run db:migrate -w @attendly/backend",
+    "db:generate": "npm run db:generate -w @attendly/backend"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Erik-Jashari/Attendly.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Erik-Jashari/Attendly/issues"
   },
